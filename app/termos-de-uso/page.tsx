@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import LegalNav from '@/components/LegalNav'
+import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function TermosDeUso() {
   return (
     <>
-      <LegalNav />
+      <Nav />
 
       <div className="page-header">
         <div className="page-header-inner">
@@ -41,7 +41,7 @@ export default function TermosDeUso() {
 
         <div className="doc-section" id="s1">
           <h2>1. ACEITAÇÃO DOS TERMOS</h2>
-          <p>Estes Termos de Uso (&ldquo;Termos&rdquo;) regulam o acesso e a utilização do aplicativo e plataforma web <strong>Construindo</strong> (&ldquo;Plataforma&rdquo;), desenvolvida e operada por [Nome da Empresa], inscrita no CNPJ sob o n.º [CNPJ da Empresa] (&ldquo;Empresa&rdquo;).</p>
+          <p>Estes Termos de Uso (&ldquo;Termos&rdquo;) regulam o acesso e a utilização do aplicativo e plataforma web <strong>Construindo</strong> (&ldquo;Plataforma&rdquo;), desenvolvida e operada por Nobre Construtora LTDA, inscrita no CNPJ sob o n.º 54.768.794/0001-67 (&ldquo;Empresa&rdquo;).</p>
           <p>Ao realizar o cadastro, acessar ou utilizar a Plataforma, o usuário declara expressamente que leu, compreendeu e concorda com todas as condições estabelecidas nestes Termos, bem como com a Política de Privacidade da Empresa, que integra este instrumento por referência.</p>
           <div className="warning-box">
             <p>CASO NÃO CONCORDE COM QUALQUER DISPOSIÇÃO DESTES TERMOS, O USUÁRIO DEVERÁ ABSTER-SE DE UTILIZAR A PLATAFORMA.</p>
@@ -155,7 +155,7 @@ export default function TermosDeUso() {
 
         <div className="doc-section" id="s11">
           <h2>11. LEGISLAÇÃO APLICÁVEL E FORO</h2>
-          <p>Estes Termos são regidos pelas leis da República Federativa do Brasil. Fica eleito o foro da Comarca de [Cidade/Estado] para dirimir quaisquer controvérsias decorrentes destes Termos, com exclusão de qualquer outro, por mais privilegiado que seja.</p>
+          <p>Estes Termos são regidos pelas leis da República Federativa do Brasil. Fica eleito o foro da Comarca de Cascavel/PR para dirimir quaisquer controvérsias decorrentes destes Termos, com exclusão de qualquer outro, por mais privilegiado que seja.</p>
         </div>
 
         <div className="doc-section" id="s12">
@@ -163,8 +163,8 @@ export default function TermosDeUso() {
           <p>Para dúvidas, solicitações ou reclamações relacionadas a estes Termos, o Usuário poderá entrar em contato com a Empresa por meio dos canais abaixo:</p>
           <div className="contact-card">
             <p>📧 <strong>E-mail:</strong> <a href="mailto:privacidade@construindo.com.br">privacidade@construindo.com.br</a></p>
-            <p>📍 <strong>Endereço:</strong> [Endereço completo da Empresa]</p>
-            <p>📞 <strong>Telefone/WhatsApp:</strong> [Número de contato]</p>
+            <p>📍 <strong>Endereço:</strong> Rua Maranhão 1665, Centro - Cascavel, PR</p>
+            <p>📞 <strong>Telefone/WhatsApp:</strong> (45) 99147-0711</p>
           </div>
           <p style={{ marginTop: '28px', fontSize: '14px', color: 'var(--muted)' }}><strong>Construindo</strong> — Última atualização: 17 de março de 2026</p>
         </div>

@@ -1,17 +1,22 @@
 import Link from 'next/link'
-import Nav from '@/components/Nav'
+import Image from 'next/image'
+// import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import AnimatedBudgetCard from '@/components/AnimatedBudgetCard'
+import AnimatedStats from '@/components/AnimatedStats'
+import PageAnimations from '@/components/PageAnimations'
 
 export default function Home() {
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
+      <PageAnimations />
 
       {/* HERO */}
       <section className="hero">
         <div className="hero-inner">
-          <div className="hero-badge">
-            <i></i> App de gestão de obras #1 do Brasil
+          <div className="hero-app-icon">
+            <Image src="/apple-touch-icon.png" alt="Construindo" width={96} height={96} priority />
           </div>
           <h1 className="hero-h1">
             Sua obra.<br /><span className="grad">Sob controle.</span>
@@ -39,7 +44,6 @@ export default function Home() {
             <div className="hf-val">R$ 2,4M</div>
             <div className="hf-sub">↓ 8% abaixo do orçado</div>
           </div>
-
           <div className="hf hf-right-top">
             <div className="hf-label">Equipe no campo hoje</div>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '6px' }}>
@@ -52,18 +56,14 @@ export default function Home() {
               <div style={{ fontSize: '11px', color: 'var(--dark-muted)' }}>24 ativos</div>
             </div>
           </div>
-
           <div className="hf hf-right-bot">
             <div className="hf-label">Progresso geral</div>
             <div className="hf-val">68%</div>
             <div className="hf-sub warn">Entrega: 15 Ago</div>
           </div>
-
           <div className="hero-phone-center">
             <div className="h-phone">
-              <div className="h-phone-status">
-                <span>9:41</span><span>▲ ◀ ■</span>
-              </div>
+              <div className="h-phone-status"><span>9:41</span><span>▲ ◀ ■</span></div>
               <div className="h-phone-pill"><span><i></i></span></div>
               <div className="h-phone-body">
                 <div className="hp-top">
@@ -103,15 +103,10 @@ export default function Home() {
 
       {/* LOGOS */}
       <div className="logos">
-        <div className="logos-label">Confiado por construtoras em todo o Brasil</div>
-        <div className="logos-row">
-          <span>MRV</span>
-          <span>Cyrela</span>
-          <span>Tenda</span>
-          <span>EZTec</span>
-          <span>Tegra</span>
-          <span>Even</span>
-          <span>Direcional</span>
+        <div className="logos-label" data-anim="fade-up">Confiado por construtoras em todo o Brasil</div>
+        <div className="logos-row" data-anim="fade-up" data-delay="2">
+          <span>MRV</span><span>Cyrela</span><span>Tenda</span>
+          <span>EZTec</span><span>Tegra</span><span>Even</span><span>Direcional</span>
         </div>
       </div>
 
@@ -119,22 +114,22 @@ export default function Home() {
       <section className="sec why" id="por-que">
         <div className="sec-inner">
           <div className="why-header">
-            <div className="eyebrow">Por que Construindo?</div>
-            <h2 className="sec-h2">Tudo que sua obra precisa,<br /><span className="grad">num único lugar</span></h2>
-            <p className="sec-sub">Elimine planilhas, WhatsApp e papelada. O Construindo centraliza a gestão para que você entregue no prazo e no orçamento.</p>
+            <div className="eyebrow" data-anim="fade-up">Por que Construindo?</div>
+            <h2 className="sec-h2" data-anim="fade-up" data-delay="1">Tudo que sua obra precisa,<br /><span className="grad">num único lugar</span></h2>
+            <p className="sec-sub" data-anim="fade-up" data-delay="2">Elimine planilhas, WhatsApp e papelada. O Construindo centraliza a gestão para que você entregue no prazo e no orçamento.</p>
           </div>
           <div className="why-grid">
-            <div className="why-card">
+            <div className="why-card" data-anim="scale-up" data-delay="1">
               <div className="why-icon">📅</div>
               <h3>Cronograma em tempo real</h3>
               <p>Visualize cada etapa em Gantt, defina dependências e receba alertas automáticos de atraso antes que o problema escale.</p>
             </div>
-            <div className="why-card">
+            <div className="why-card" data-anim="scale-up" data-delay="2">
               <div className="why-icon">💰</div>
               <h3>Orçado vs. realizado</h3>
               <p>Compare custos planejados e executados em tempo real. Identifique desvios no segundo em que acontecem, não no fim do mês.</p>
             </div>
-            <div className="why-card">
+            <div className="why-card" data-anim="scale-up" data-delay="3">
               <div className="why-icon">👷</div>
               <h3>Equipes e fornecedores</h3>
               <p>Gerencie presença, produtividade e pagamentos de subempreiteiros direto do app. Histórico completo de cada profissional.</p>
@@ -146,7 +141,7 @@ export default function Home() {
       {/* FEATURE DARK */}
       <section className="sec feat-dark">
         <div className="feat-dark-inner">
-          <div>
+          <div data-anim="fade-left">
             <div className="eyebrow">Acompanhamento de tarefas</div>
             <h2 className="sec-h2">Cada equipe sabe<br />exatamente o que fazer</h2>
             <p className="sec-sub" style={{ color: 'var(--dark-muted)' }}>Distribua tarefas por etapa, perfil e data. Cada profissional vê só o que lhe compete — sem ruído, sem confusão.</p>
@@ -174,7 +169,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="dark-phone">
+          <div className="dark-phone" data-anim="fade-right">
             <div className="dp-title">Tarefas da Semana — Bloco A</div>
             <div className="dp-task">
               <div className="dp-dot" style={{ background: '#4ade80' }}></div>
@@ -210,33 +205,10 @@ export default function Home() {
       {/* FEATURE LIGHT */}
       <section className="sec feat-light">
         <div className="feat-light-inner">
-          <div className="budget-card-wrap">
-            <div className="bc-header">
-              <div className="bc-title">Resumo Financeiro</div>
-              <div className="bc-badge">Atualizado agora</div>
-            </div>
-            <div className="bc-total">R$ 1.248.000</div>
-            <div className="bc-sub">Custo total realizado · Orçado: R$ 1.300.000</div>
-            <div className="bc-row">
-              <div className="bc-row-label"><div className="bc-dot" style={{ background: 'var(--orange)' }}></div>Mão de obra</div>
-              <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}><div className="bc-row-pct">42%</div><div className="bc-row-val">R$ 524k</div></div>
-            </div>
-            <div className="bc-row">
-              <div className="bc-row-label"><div className="bc-dot" style={{ background: '#3B82F6' }}></div>Materiais</div>
-              <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}><div className="bc-row-pct">35%</div><div className="bc-row-val">R$ 437k</div></div>
-            </div>
-            <div className="bc-row">
-              <div className="bc-row-label"><div className="bc-dot" style={{ background: '#10B981' }}></div>Equipamentos</div>
-              <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}><div className="bc-row-pct">15%</div><div className="bc-row-val">R$ 187k</div></div>
-            </div>
-            <div className="bc-row">
-              <div className="bc-row-label"><div className="bc-dot" style={{ background: '#8B5CF6' }}></div>Outros</div>
-              <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}><div className="bc-row-pct">8%</div><div className="bc-row-val">R$ 100k</div></div>
-            </div>
-          </div>
-          <div>
+          <AnimatedBudgetCard />
+          <div data-anim="fade-right">
             <div className="eyebrow">Controle financeiro</div>
-            <h2 className="sec-h2">Orçamento e custos<br />no seu bolso</h2>
+            <h2 className="sec-h2">Orçamento e custos em tempo real</h2>
             <p className="sec-sub">Registre notas fiscais, aprovações e pagamentos. Veja orçado vs. realizado por categoria em tempo real, antes que o desvio vire problema.</p>
             <div className="feat-list" style={{ marginTop: '28px' }}>
               <div className="feat-item">
@@ -260,44 +232,27 @@ export default function Home() {
 
       {/* STATS */}
       <section className="stats-sec">
-        <div className="stats-inner">
-          <div>
-            <div className="stat-num">50K+</div>
-            <div className="stat-label">Obras gerenciadas na plataforma</div>
-          </div>
-          <div>
-            <div className="stat-num">R$2B+</div>
-            <div className="stat-label">Em custos de obras controlados</div>
-          </div>
-          <div>
-            <div className="stat-num">1.200+</div>
-            <div className="stat-label">Construtoras ativas</div>
-          </div>
-          <div>
-            <div className="stat-num">4.9★</div>
-            <div className="stat-label">Avaliação média nas lojas</div>
-          </div>
-        </div>
+        <AnimatedStats />
       </section>
 
       {/* HOW IT WORKS */}
       <section className="sec how" id="como-funciona">
         <div className="sec-inner">
           <div className="how-header">
-            <div className="eyebrow">Como funciona</div>
-            <h2 className="sec-h2">Comece a gerir em <span className="grad">menos de 5 minutos</span></h2>
-            <p className="sec-sub">Cadastro simples, sem treinamento longo. Sua primeira obra configurada em minutos.</p>
+            <div className="eyebrow" data-anim="fade-up">Como funciona</div>
+            <h2 className="sec-h2" data-anim="fade-up" data-delay="1">Comece a gerir em <span className="grad">menos de 5 minutos</span></h2>
+            <p className="sec-sub" data-anim="fade-up" data-delay="2">Cadastro simples, sem treinamento longo. Sua primeira obra configurada em minutos.</p>
           </div>
           <div className="how-grid">
             <div className="how-steps">
-              <div className="how-step">
+              <div className="how-step" data-anim="fade-left" data-delay="1">
                 <div className="how-num">1</div>
                 <div>
                   <h4>Cadastre a obra</h4>
                   <p>Nome, endereço, prazo e equipe. Importe plantas e documentos diretamente pelo app em segundos.</p>
                 </div>
               </div>
-              <div className="how-step">
+              <div className="how-step" data-anim="fade-left" data-delay="3">
                 <div className="how-num">2</div>
                 <div>
                   <h4>Monte o cronograma</h4>
@@ -305,7 +260,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', justifyContent: 'center' }} data-anim="scale-up" data-delay="2">
               <div className="how-phone">
                 <div className="hw-notch"><span></span></div>
                 <div className="hw-body">
@@ -322,14 +277,14 @@ export default function Home() {
               </div>
             </div>
             <div className="how-steps">
-              <div className="how-step r">
+              <div className="how-step r" data-anim="fade-right" data-delay="1">
                 <div className="how-num">3</div>
                 <div>
                   <h4>Acompanhe em tempo real</h4>
                   <p>Fotos, ocorrências e atualizações do campo chegam até você na hora, em qualquer dispositivo.</p>
                 </div>
               </div>
-              <div className="how-step r">
+              <div className="how-step r" data-anim="fade-right" data-delay="3">
                 <div className="how-num">4</div>
                 <div>
                   <h4>Pague com segurança</h4>
@@ -345,13 +300,13 @@ export default function Home() {
       <section className="testi-sec" id="depoimentos">
         <div className="testi-header">
           <div>
-            <div className="eyebrow">Depoimentos</div>
-            <h2 className="sec-h2">Quem usa,<br /><span className="grad">não volta atrás</span></h2>
+            <div className="eyebrow" data-anim="fade-up">Depoimentos</div>
+            <h2 className="sec-h2" data-anim="fade-up" data-delay="1">Quem usa,<br /><span className="grad">não volta atrás</span></h2>
           </div>
-          <p style={{ fontSize: '16px', color: 'var(--muted)', maxWidth: '340px', lineHeight: '1.6' }}>Construtoras de todo o Brasil entregando obras no prazo e no orçamento.</p>
+          <p data-anim="fade-up" data-delay="2" style={{ fontSize: '16px', color: 'var(--muted)', maxWidth: '340px', lineHeight: '1.6' }}>Construtoras de todo o Brasil entregando obras no prazo e no orçamento.</p>
         </div>
         <div className="testi-grid">
-          <div className="testi-card">
+          <div className="testi-card" data-anim="scale-up" data-delay="1">
             <div className="testi-stars">★★★★★</div>
             <p className="testi-quote">&ldquo;Antes usávamos planilhas e e-mail para tudo. Hoje qualquer sócio acessa o andamento de qualquer obra pelo celular. A visibilidade é impressionante.&rdquo;</p>
             <div className="testi-author">
@@ -362,7 +317,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="testi-card">
+          <div className="testi-card" data-anim="scale-up" data-delay="2">
             <div className="testi-stars">★★★★★</div>
             <p className="testi-quote">&ldquo;Reduzimos desvios de orçamento em 28% no primeiro trimestre. O alerta de desvio em tempo real mudou nossa forma de gerir contratos para sempre.&rdquo;</p>
             <div className="testi-author">
@@ -373,7 +328,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="testi-card">
+          <div className="testi-card" data-anim="scale-up" data-delay="3">
             <div className="testi-stars">★★★★★</div>
             <p className="testi-quote">&ldquo;O diário de obra digital resolveu brigas históricas sobre o que foi ou não executado. Foto, data e responsável registrados para cada evento da obra.&rdquo;</p>
             <div className="testi-author">
@@ -389,7 +344,7 @@ export default function Home() {
 
       {/* FINAL CTA */}
       <section className="final-cta">
-        <div className="final-cta-inner">
+        <div className="final-cta-inner" data-anim="fade-up">
           <h2>Comece a gerir suas obras<br /><span className="grad">do jeito certo.</span></h2>
           <p>Grátis para começar. Sem cartão de crédito. Sua primeira obra configurada em minutos.</p>
           <div className="final-btns">

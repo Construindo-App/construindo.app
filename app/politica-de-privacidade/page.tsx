@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import LegalNav from '@/components/LegalNav'
+import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function PoliticaDePrivacidade() {
   return (
     <>
-      <LegalNav />
+      <Nav />
 
       <div className="page-header">
         <div className="page-header-inner">
@@ -46,8 +46,8 @@ export default function PoliticaDePrivacidade() {
 
         <div className="doc-section" id="s1">
           <h2>1. IDENTIFICAÇÃO DO CONTROLADOR</h2>
-          <p>[Nome da Empresa], inscrita no CNPJ sob o n.º [CNPJ da Empresa], com sede em [Endereço Completo], é a Controladora dos Dados Pessoais coletados por meio da Plataforma <strong>Construindo</strong>, sendo responsável pelas decisões referentes ao tratamento de dados pessoais.</p>
-          <p>Encarregado de Proteção de Dados (DPO): [Nome do DPO]</p>
+          <p>Nobre Construtora LTDA, inscrita no CNPJ sob o n.º 54.768.794/0001-67, com sede em Rua Maranhão 1665, Centro - Cascavel, PR, é a Controladora dos Dados Pessoais coletados por meio da Plataforma <strong>Construindo</strong>, sendo responsável pelas decisões referentes ao tratamento de dados pessoais.</p>
+          <p>Encarregado de Proteção de Dados (DPO): Rodrigo Parra</p>
           <p>Contato do DPO: <a href="mailto:dpo@construindo.com.br" style={{ color: 'var(--orange)', fontWeight: 600 }}>dpo@construindo.com.br</a></p>
         </div>
 
@@ -223,8 +223,8 @@ export default function PoliticaDePrivacidade() {
           <div className="contact-card">
             <p>📧 <strong>E-mail de Privacidade:</strong> <a href="mailto:privacidade@construindo.com.br">privacidade@construindo.com.br</a></p>
             <p>🔒 <strong>E-mail do DPO:</strong> <a href="mailto:dpo@construindo.com.br">dpo@construindo.com.br</a></p>
-            <p>📍 <strong>Endereço:</strong> [Endereço completo da Empresa]</p>
-            <p>📞 <strong>Telefone:</strong> [Número de contato]</p>
+            <p>📍 <strong>Endereço:</strong> Rua Maranhão 1665, Centro - Cascavel, PR</p>
+            <p>📞 <strong>Telefone:</strong> (45) 99147-0711</p>
           </div>
           <p style={{ marginTop: '28px', fontSize: '14px', color: 'var(--muted)' }}><strong>Construindo</strong> — Última atualização: 17 de março de 2026</p>
         </div>

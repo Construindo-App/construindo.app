@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import LegalNav from '@/components/LegalNav'
+import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import LgpdForm from './LgpdForm'
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function LgpdPage() {
   return (
     <>
-      <LegalNav />
+      <Nav />
 
       <div className="page-header">
         <div className="page-header-inner">
