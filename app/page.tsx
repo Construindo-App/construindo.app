@@ -1,0 +1,412 @@
+import Link from 'next/link'
+import Nav from '@/components/Nav'
+import Footer from '@/components/Footer'
+
+export default function Home() {
+  return (
+    <>
+      <Nav />
+
+      {/* HERO */}
+      <section className="hero">
+        <div className="hero-inner">
+          <div className="hero-badge">
+            <i></i> App de gestão de obras #1 do Brasil
+          </div>
+          <h1 className="hero-h1">
+            Sua obra.<br /><span className="grad">Sob controle.</span>
+          </h1>
+          <p className="hero-sub">
+            Do canteiro ao escritório — cronograma, orçamento, equipes e documentos em um único app. Chega de planilha, chega de WhatsApp.
+          </p>
+          <div className="hero-actions">
+            <Link href="#" className="btn-primary">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" /></svg>
+              Baixar na App Store
+            </Link>
+            <Link href="#" className="btn-secondary">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.28.15.6.2.94.1l12.5-7.13-2.67-2.67-10.77 9.7zM.5 1.3C.18 1.62 0 2.1 0 2.72v18.56c0 .62.18 1.1.5 1.42l.08.07 10.4-10.4v-.25L.57 1.24l-.07.06zM20.33 10.52l-2.67-1.52-2.96 2.96 2.96 2.96 2.68-1.53c.77-.44.77-1.44-.01-1.87zM4.12.24L16.62 7.4l-2.67 2.67L3.18.24c.35-.1.67-.04.94.1v-.1z" fillRule="evenodd" /></svg>
+              Baixar no Google Play
+            </Link>
+          </div>
+          <p className="hero-free">Grátis para começar · Sem cartão de crédito</p>
+        </div>
+
+        {/* Phone + floating cards */}
+        <div className="hero-stage">
+          <div className="hf hf-left">
+            <div className="hf-label">Custo total da obra</div>
+            <div className="hf-val">R$ 2,4M</div>
+            <div className="hf-sub">↓ 8% abaixo do orçado</div>
+          </div>
+
+          <div className="hf hf-right-top">
+            <div className="hf-label">Equipe no campo hoje</div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '6px' }}>
+              <div className="hf-avatars">
+                <div className="hf-av">R</div>
+                <div className="hf-av">C</div>
+                <div className="hf-av">A</div>
+                <div className="hf-av">+8</div>
+              </div>
+              <div style={{ fontSize: '11px', color: 'var(--dark-muted)' }}>24 ativos</div>
+            </div>
+          </div>
+
+          <div className="hf hf-right-bot">
+            <div className="hf-label">Progresso geral</div>
+            <div className="hf-val">68%</div>
+            <div className="hf-sub warn">Entrega: 15 Ago</div>
+          </div>
+
+          <div className="hero-phone-center">
+            <div className="h-phone">
+              <div className="h-phone-status">
+                <span>9:41</span><span>▲ ◀ ■</span>
+              </div>
+              <div className="h-phone-pill"><span><i></i></span></div>
+              <div className="h-phone-body">
+                <div className="hp-top">
+                  <div>
+                    <div className="hp-greeting">Bom dia, Rafael 👋</div>
+                    <div className="hp-title">Minhas Obras</div>
+                  </div>
+                  <div className="hp-av">R</div>
+                </div>
+                <div className="hp-card">
+                  <div className="hp-card-label">Residencial Jardins</div>
+                  <div className="hp-card-val">68% concluído</div>
+                  <div className="hp-card-sub">Entrega: 15 de agosto</div>
+                  <div className="hp-bar"><div className="hp-bar-fill"></div></div>
+                </div>
+                <div className="hp-tasks-label">Tarefas de hoje</div>
+                <div className="hp-task">
+                  <div className="hp-task-dot" style={{ background: '#f59e0b' }}></div>
+                  <div className="hp-task-name">Concretagem — Bloco B</div>
+                  <div className="hp-task-tag" style={{ background: 'rgba(245,158,11,.15)', color: '#f59e0b' }}>Em curso</div>
+                </div>
+                <div className="hp-task">
+                  <div className="hp-task-dot" style={{ background: '#4ade80' }}></div>
+                  <div className="hp-task-name">Entrega de aço — 12t</div>
+                  <div className="hp-task-tag" style={{ background: 'rgba(74,222,128,.15)', color: '#4ade80' }}>OK</div>
+                </div>
+                <div className="hp-task">
+                  <div className="hp-task-dot" style={{ background: 'var(--orange)' }}></div>
+                  <div className="hp-task-name">Visita do Engenheiro</div>
+                  <div className="hp-task-tag" style={{ background: 'rgba(222,99,51,.15)', color: 'var(--orange)' }}>Hoje</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* LOGOS */}
+      <div className="logos">
+        <div className="logos-label">Confiado por construtoras em todo o Brasil</div>
+        <div className="logos-row">
+          <span>MRV</span>
+          <span>Cyrela</span>
+          <span>Tenda</span>
+          <span>EZTec</span>
+          <span>Tegra</span>
+          <span>Even</span>
+          <span>Direcional</span>
+        </div>
+      </div>
+
+      {/* WHY */}
+      <section className="sec why" id="por-que">
+        <div className="sec-inner">
+          <div className="why-header">
+            <div className="eyebrow">Por que Construindo?</div>
+            <h2 className="sec-h2">Tudo que sua obra precisa,<br /><span className="grad">num único lugar</span></h2>
+            <p className="sec-sub">Elimine planilhas, WhatsApp e papelada. O Construindo centraliza a gestão para que você entregue no prazo e no orçamento.</p>
+          </div>
+          <div className="why-grid">
+            <div className="why-card">
+              <div className="why-icon">📅</div>
+              <h3>Cronograma em tempo real</h3>
+              <p>Visualize cada etapa em Gantt, defina dependências e receba alertas automáticos de atraso antes que o problema escale.</p>
+            </div>
+            <div className="why-card">
+              <div className="why-icon">💰</div>
+              <h3>Orçado vs. realizado</h3>
+              <p>Compare custos planejados e executados em tempo real. Identifique desvios no segundo em que acontecem, não no fim do mês.</p>
+            </div>
+            <div className="why-card">
+              <div className="why-icon">👷</div>
+              <h3>Equipes e fornecedores</h3>
+              <p>Gerencie presença, produtividade e pagamentos de subempreiteiros direto do app. Histórico completo de cada profissional.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURE DARK */}
+      <section className="sec feat-dark">
+        <div className="feat-dark-inner">
+          <div>
+            <div className="eyebrow">Acompanhamento de tarefas</div>
+            <h2 className="sec-h2">Cada equipe sabe<br />exatamente o que fazer</h2>
+            <p className="sec-sub" style={{ color: 'var(--dark-muted)' }}>Distribua tarefas por etapa, perfil e data. Cada profissional vê só o que lhe compete — sem ruído, sem confusão.</p>
+            <div className="feat-list">
+              <div className="feat-item">
+                <div className="feat-check">✓</div>
+                <div>
+                  <div className="feat-item-title">Atribuição por perfil</div>
+                  <div className="feat-item-desc">Construtores, engenheiros, mestres e subempreiteiros com acessos distintos e notificações sob medida.</div>
+                </div>
+              </div>
+              <div className="feat-item">
+                <div className="feat-check">✓</div>
+                <div>
+                  <div className="feat-item-title">Status em tempo real</div>
+                  <div className="feat-item-desc">Pendente, em andamento, concluído — atualizado no campo pelo celular, visível no escritório na hora.</div>
+                </div>
+              </div>
+              <div className="feat-item">
+                <div className="feat-check">✓</div>
+                <div>
+                  <div className="feat-item-title">Alertas inteligentes</div>
+                  <div className="feat-item-desc">O sistema identifica gargalos e avisa com antecedência antes que o atraso afete o prazo de entrega.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="dark-phone">
+            <div className="dp-title">Tarefas da Semana — Bloco A</div>
+            <div className="dp-task">
+              <div className="dp-dot" style={{ background: '#4ade80' }}></div>
+              <div className="dp-name">Concretagem laje — Pav. 3</div>
+              <div className="dp-badge" style={{ background: 'rgba(74,222,128,.15)', color: '#4ade80' }}>Concluído</div>
+            </div>
+            <div className="dp-task">
+              <div className="dp-dot" style={{ background: '#f59e0b' }}></div>
+              <div className="dp-name">Instalação hidráulica</div>
+              <div className="dp-badge" style={{ background: 'rgba(245,158,11,.15)', color: '#f59e0b' }}>Em curso</div>
+              <div className="dp-pct">72%</div>
+            </div>
+            <div className="dp-task">
+              <div className="dp-dot" style={{ background: 'var(--orange)' }}></div>
+              <div className="dp-name">Fiação elétrica — Pav. 3</div>
+              <div className="dp-badge" style={{ background: 'rgba(222,99,51,.15)', color: 'var(--orange)' }}>Hoje</div>
+            </div>
+            <div className="dp-task">
+              <div className="dp-dot" style={{ background: '#6B7280' }}></div>
+              <div className="dp-name">Reboco externo</div>
+              <div className="dp-badge" style={{ background: 'rgba(107,114,128,.15)', color: '#6B7280' }}>Aguardando</div>
+            </div>
+            <div className="dp-task">
+              <div className="dp-dot" style={{ background: '#3B82F6' }}></div>
+              <div className="dp-name">Acabamento interno</div>
+              <div className="dp-badge" style={{ background: 'rgba(59,130,246,.15)', color: '#3B82F6' }}>Planejado</div>
+              <div className="dp-pct">0%</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURE LIGHT */}
+      <section className="sec feat-light">
+        <div className="feat-light-inner">
+          <div className="budget-card-wrap">
+            <div className="bc-header">
+              <div className="bc-title">Resumo Financeiro</div>
+              <div className="bc-badge">Atualizado agora</div>
+            </div>
+            <div className="bc-total">R$ 1.248.000</div>
+            <div className="bc-sub">Custo total realizado · Orçado: R$ 1.300.000</div>
+            <div className="bc-row">
+              <div className="bc-row-label"><div className="bc-dot" style={{ background: 'var(--orange)' }}></div>Mão de obra</div>
+              <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}><div className="bc-row-pct">42%</div><div className="bc-row-val">R$ 524k</div></div>
+            </div>
+            <div className="bc-row">
+              <div className="bc-row-label"><div className="bc-dot" style={{ background: '#3B82F6' }}></div>Materiais</div>
+              <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}><div className="bc-row-pct">35%</div><div className="bc-row-val">R$ 437k</div></div>
+            </div>
+            <div className="bc-row">
+              <div className="bc-row-label"><div className="bc-dot" style={{ background: '#10B981' }}></div>Equipamentos</div>
+              <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}><div className="bc-row-pct">15%</div><div className="bc-row-val">R$ 187k</div></div>
+            </div>
+            <div className="bc-row">
+              <div className="bc-row-label"><div className="bc-dot" style={{ background: '#8B5CF6' }}></div>Outros</div>
+              <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}><div className="bc-row-pct">8%</div><div className="bc-row-val">R$ 100k</div></div>
+            </div>
+          </div>
+          <div>
+            <div className="eyebrow">Controle financeiro</div>
+            <h2 className="sec-h2">Orçamento e custos<br />no seu bolso</h2>
+            <p className="sec-sub">Registre notas fiscais, aprovações e pagamentos. Veja orçado vs. realizado por categoria em tempo real, antes que o desvio vire problema.</p>
+            <div className="feat-list" style={{ marginTop: '28px' }}>
+              <div className="feat-item">
+                <div className="feat-check" style={{ background: 'var(--orange-lt)' }}>✓</div>
+                <div>
+                  <div className="feat-item-title" style={{ color: 'var(--text)' }}>Notas fiscais digitais</div>
+                  <div className="feat-item-desc" style={{ color: 'var(--muted)' }}>Importe NF-e com um toque. Categorização automática por tipo de custo e obra.</div>
+                </div>
+              </div>
+              <div className="feat-item">
+                <div className="feat-check" style={{ background: 'var(--orange-lt)' }}>✓</div>
+                <div>
+                  <div className="feat-item-title" style={{ color: 'var(--text)' }}>Aprovação de pagamentos</div>
+                  <div className="feat-item-desc" style={{ color: 'var(--muted)' }}>Fluxo de aprovação com alçadas por valor. Histórico auditável de cada liberação.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* STATS */}
+      <section className="stats-sec">
+        <div className="stats-inner">
+          <div>
+            <div className="stat-num">50K+</div>
+            <div className="stat-label">Obras gerenciadas na plataforma</div>
+          </div>
+          <div>
+            <div className="stat-num">R$2B+</div>
+            <div className="stat-label">Em custos de obras controlados</div>
+          </div>
+          <div>
+            <div className="stat-num">1.200+</div>
+            <div className="stat-label">Construtoras ativas</div>
+          </div>
+          <div>
+            <div className="stat-num">4.9★</div>
+            <div className="stat-label">Avaliação média nas lojas</div>
+          </div>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section className="sec how" id="como-funciona">
+        <div className="sec-inner">
+          <div className="how-header">
+            <div className="eyebrow">Como funciona</div>
+            <h2 className="sec-h2">Comece a gerir em <span className="grad">menos de 5 minutos</span></h2>
+            <p className="sec-sub">Cadastro simples, sem treinamento longo. Sua primeira obra configurada em minutos.</p>
+          </div>
+          <div className="how-grid">
+            <div className="how-steps">
+              <div className="how-step">
+                <div className="how-num">1</div>
+                <div>
+                  <h4>Cadastre a obra</h4>
+                  <p>Nome, endereço, prazo e equipe. Importe plantas e documentos diretamente pelo app em segundos.</p>
+                </div>
+              </div>
+              <div className="how-step">
+                <div className="how-num">2</div>
+                <div>
+                  <h4>Monte o cronograma</h4>
+                  <p>Defina etapas, tarefas e responsáveis. Alertas automáticos de atraso e desvio de prazo.</p>
+                </div>
+              </div>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <div className="how-phone">
+                <div className="hw-notch"><span></span></div>
+                <div className="hw-body">
+                  <div className="hw-top">
+                    <div className="hw-title-text">Bloco A — Laje</div>
+                    <div className="hw-tag">Em Obra</div>
+                  </div>
+                  <div className="hw-img">🏗️</div>
+                  <div className="hw-row"><span>Início</span><span>05 Jan 2026</span></div>
+                  <div className="hw-row"><span>Entrega</span><span>30 Jul 2026</span></div>
+                  <div className="hw-row"><span>Progresso</span><span>72%</span></div>
+                  <button className="hw-btn">Ver Relatório</button>
+                </div>
+              </div>
+            </div>
+            <div className="how-steps">
+              <div className="how-step r">
+                <div className="how-num">3</div>
+                <div>
+                  <h4>Acompanhe em tempo real</h4>
+                  <p>Fotos, ocorrências e atualizações do campo chegam até você na hora, em qualquer dispositivo.</p>
+                </div>
+              </div>
+              <div className="how-step r">
+                <div className="how-num">4</div>
+                <div>
+                  <h4>Pague com segurança</h4>
+                  <p>Aprove medições e libere pagamentos com um toque. Histórico completo para auditoria e prestação de contas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="testi-sec" id="depoimentos">
+        <div className="testi-header">
+          <div>
+            <div className="eyebrow">Depoimentos</div>
+            <h2 className="sec-h2">Quem usa,<br /><span className="grad">não volta atrás</span></h2>
+          </div>
+          <p style={{ fontSize: '16px', color: 'var(--muted)', maxWidth: '340px', lineHeight: '1.6' }}>Construtoras de todo o Brasil entregando obras no prazo e no orçamento.</p>
+        </div>
+        <div className="testi-grid">
+          <div className="testi-card">
+            <div className="testi-stars">★★★★★</div>
+            <p className="testi-quote">&ldquo;Antes usávamos planilhas e e-mail para tudo. Hoje qualquer sócio acessa o andamento de qualquer obra pelo celular. A visibilidade é impressionante.&rdquo;</p>
+            <div className="testi-author">
+              <div className="testi-av" style={{ background: 'var(--orange)' }}>C</div>
+              <div>
+                <div className="testi-name">Carlos Mendonça</div>
+                <div className="testi-role">Diretor, Construtora Mendonça</div>
+              </div>
+            </div>
+          </div>
+          <div className="testi-card">
+            <div className="testi-stars">★★★★★</div>
+            <p className="testi-quote">&ldquo;Reduzimos desvios de orçamento em 28% no primeiro trimestre. O alerta de desvio em tempo real mudou nossa forma de gerir contratos para sempre.&rdquo;</p>
+            <div className="testi-author">
+              <div className="testi-av" style={{ background: '#10B981' }}>A</div>
+              <div>
+                <div className="testi-name">Ana Lima</div>
+                <div className="testi-role">Engenheira de Custos, Tenda</div>
+              </div>
+            </div>
+          </div>
+          <div className="testi-card">
+            <div className="testi-stars">★★★★★</div>
+            <p className="testi-quote">&ldquo;O diário de obra digital resolveu brigas históricas sobre o que foi ou não executado. Foto, data e responsável registrados para cada evento da obra.&rdquo;</p>
+            <div className="testi-author">
+              <div className="testi-av" style={{ background: '#8B5CF6' }}>M</div>
+              <div>
+                <div className="testi-name">Marcelo Ramos</div>
+                <div className="testi-role">Engenheiro de Campo, EZTec</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="final-cta">
+        <div className="final-cta-inner">
+          <h2>Comece a gerir suas obras<br /><span className="grad">do jeito certo.</span></h2>
+          <p>Grátis para começar. Sem cartão de crédito. Sua primeira obra configurada em minutos.</p>
+          <div className="final-btns">
+            <Link href="#" className="btn-primary" style={{ fontSize: '16px', padding: '16px 36px' }}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" /></svg>
+              Baixar na App Store
+            </Link>
+            <Link href="#" className="btn-secondary" style={{ fontSize: '16px', padding: '16px 36px' }}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.28.15.6.2.94.1l12.5-7.13-2.67-2.67-10.77 9.7zM.5 1.3C.18 1.62 0 2.1 0 2.72v18.56c0 .62.18 1.1.5 1.42l.08.07 10.4-10.4v-.25L.57 1.24l-.07.06zM20.33 10.52l-2.67-1.52-2.96 2.96 2.96 2.96 2.68-1.53c.77-.44.77-1.44-.01-1.87zM4.12.24L16.62 7.4l-2.67 2.67L3.18.24c.35-.1.67-.04.94.1v-.1z" fillRule="evenodd" /></svg>
+              Baixar no Google Play
+            </Link>
+          </div>
+          <p className="final-note">Disponível para iOS e Android · Grátis para começar</p>
+        </div>
+      </section>
+
+      <Footer variant="main" />
+    </>
+  )
+}
