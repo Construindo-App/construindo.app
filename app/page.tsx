@@ -235,63 +235,145 @@ export default function Home() {
         <AnimatedStats />
       </section>
 
-      {/* HOW IT WORKS */}
-      <section className="sec how" id="como-funciona">
+      {/* CLIENT PORTAL */}
+      <section className="sec client-feat" id="como-funciona">
         <div className="sec-inner">
-          <div className="how-header">
-            <div className="eyebrow" data-anim="fade-up">Como funciona</div>
-            <h2 className="sec-h2" data-anim="fade-up" data-delay="1">Comece a gerir em <span className="grad">menos de 5 minutos</span></h2>
-            <p className="sec-sub" data-anim="fade-up" data-delay="2">Cadastro simples, sem treinamento longo. Sua primeira obra configurada em minutos.</p>
+          <div className="cf-header">
+            <div className="eyebrow" data-anim="fade-up">Portal do cliente</div>
+            <h2 className="sec-h2" data-anim="fade-up" data-delay="1">Transparência total<br /><span className="grad">na palma da mão</span></h2>
+            <p className="sec-sub cf-sub" data-anim="fade-up" data-delay="2">Seus clientes acompanham a obra em tempo real — sem telefonemas, sem WhatsApp. Tudo num portal dedicado, simples e seguro.</p>
           </div>
-          <div className="how-grid">
-            <div className="how-steps">
-              <div className="how-step" data-anim="fade-left" data-delay="1">
-                <div className="how-num">1</div>
-                <div>
-                  <h4>Cadastre a obra</h4>
-                  <p>Nome, endereço, prazo e equipe. Importe plantas e documentos diretamente pelo app em segundos.</p>
+          <div className="cf-grid">
+
+            {/* Card 1: Diário de obra */}
+            <div className="cf-card" data-anim="scale-up" data-delay="1">
+              <div className="cf-snap cf-snap-diary">
+                <div className="diary-scene">
+                  <svg className="diary-svg" viewBox="0 0 430 292" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 27 131 C 60 95 85 65 110 65 C 150 65 200 135 242 145 C 285 155 340 210 362 216 C 370 240 350 258 321 258" stroke="#C8BFB0" strokeWidth="1.5" strokeDasharray="6 5" strokeLinecap="round"/>
+                  </svg>
+                  <Image src="/diary/icon-orange.png" alt="" width={46} height={46} className="dicon dicon-orange" style={{width:46,height:46}} />
+                  <Image src="/diary/photo1.png" alt="" width={197} height={183} className="dphoto dphoto-1" style={{width:120,height:'auto'}} />
+                  <Image src="/diary/photo2.png" alt="" width={197} height={183} className="dphoto dphoto-2" style={{width:120,height:'auto'}} />
+                  <Image src="/diary/photo3.png" alt="" width={197} height={183} className="dphoto dphoto-3" style={{width:120,height:'auto'}} />
+                  <Image src="/diary/icon-green.png" alt="" width={46} height={46} className="dicon dicon-green" style={{width:46,height:46}} />
                 </div>
               </div>
-              <div className="how-step" data-anim="fade-left" data-delay="3">
-                <div className="how-num">2</div>
-                <div>
-                  <h4>Monte o cronograma</h4>
-                  <p>Defina etapas, tarefas e responsáveis. Alertas automáticos de atraso e desvio de prazo.</p>
-                </div>
+              <div className="cf-content">
+                <h3>Diário de obra</h3>
+                <p>Registros diários com fotos, vídeos e anotações. O cliente acompanha o avanço real sem precisar visitar o canteiro.</p>
               </div>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'center' }} data-anim="scale-up" data-delay="2">
-              <div className="how-phone">
-                <div className="hw-notch"><span></span></div>
-                <div className="hw-body">
-                  <div className="hw-top">
-                    <div className="hw-title-text">Bloco A — Laje</div>
-                    <div className="hw-tag">Em Obra</div>
+
+            {/* Card 2: Gestão de pagamentos */}
+            <div className="cf-card" data-anim="scale-up" data-delay="2">
+              <div className="cf-snap cf-snap-pay">
+                <div className="cfs-profile">
+                  <div className="cfs-avatar">M</div>
+                  <div>
+                    <div className="cfs-name">Marcos Antônio Frederico</div>
+                    <div className="cfs-role">Comprador</div>
                   </div>
-                  <div className="hw-img">🏗️</div>
-                  <div className="hw-row"><span>Início</span><span>05 Jan 2026</span></div>
-                  <div className="hw-row"><span>Entrega</span><span>30 Jul 2026</span></div>
-                  <div className="hw-row"><span>Progresso</span><span>72%</span></div>
-                  <button className="hw-btn">Ver Relatório</button>
                 </div>
+                <div className="cfs-table">
+                  <div className="cfs-tr"><span>Valor total</span><span>R$300.000,00</span></div>
+                  <div className="cfs-tr"><span>Entrada</span><span>R$60.000,00</span></div>
+                  <div className="cfs-tr"><span>Sinal</span><span>R$1.271,38</span></div>
+                </div>
+                <div className="cfs-pay-title">Pagamentos 3/12</div>
+                <div className="cfs-prog"><div className="cfs-prog-fill"></div></div>
+                <div className="cfs-plist">
+                  <div className="cfs-prow">
+                    <div className="cfs-pcheck green">✓</div>
+                    <div className="cfs-pinfo"><div className="cfs-pdate">5 Out 2025</div><div className="cfs-psub">Parcela 2</div></div>
+                    <div className="cfs-pamt">R$10.000</div>
+                  </div>
+                  <div className="cfs-prow">
+                    <div className="cfs-pcheck amber">⏱</div>
+                    <div className="cfs-pinfo"><div className="cfs-pdate">5 Nov 2025</div><div className="cfs-psub">Parcela 3</div></div>
+                    <div className="cfs-pamt">R$1.271</div>
+                  </div>
+                  <div className="cfs-prow muted">
+                    <div className="cfs-pcheck grey"></div>
+                    <div className="cfs-pinfo"><div className="cfs-pdate">5 Dez 2025</div><div className="cfs-psub">Parcela 4</div></div>
+                    <div className="cfs-pamt">R$7.500</div>
+                  </div>
+                </div>
+              </div>
+              <div className="cf-content">
+                <h3>Gestão de pagamentos</h3>
+                <p>Cronograma financeiro, boletos e comprovantes organizados. Histórico completo de cada parcela, acessível a qualquer hora.</p>
               </div>
             </div>
-            <div className="how-steps">
-              <div className="how-step r" data-anim="fade-right" data-delay="1">
-                <div className="how-num">3</div>
-                <div>
-                  <h4>Acompanhe em tempo real</h4>
-                  <p>Fotos, ocorrências e atualizações do campo chegam até você na hora, em qualquer dispositivo.</p>
+
+            {/* Card 3: Gestão de documentos */}
+            <div className="cf-card" data-anim="scale-up" data-delay="3">
+              <div className="cf-snap cf-snap-docs">
+                <div className="cfs-app-header">
+                  <span className="cfs-back">←</span>
+                  <span className="cfs-app-icon">🏠</span>
+                  <span className="cfs-app-title">Casa JF</span>
+                </div>
+                <div className="cfs-doc-title">Documentos da Obra</div>
+                <div className="cfs-tabs">
+                  <div className="cfs-tab active">Compartilhados</div>
+                  <div className="cfs-tab">Outros</div>
+                </div>
+                <div className="cfs-drow">
+                  <div className="cfs-dicon"></div>
+                  <div className="cfs-dinfo"><div className="cfs-dname">Contrato de Compra</div><div className="cfs-ddate">Adicionado 24/08/2023</div></div>
+                  <div className="cfs-toggle off"><span /></div>
+                </div>
+                <div className="cfs-drow">
+                  <div className="cfs-dicon"></div>
+                  <div className="cfs-dinfo"><div className="cfs-dname">Projeto Arquitetônico</div><div className="cfs-ddate">Adicionado 24/08/2023</div></div>
+                  <div className="cfs-toggle off"><span /></div>
+                </div>
+                <div className="cfs-drow">
+                  <div className="cfs-dicon"></div>
+                  <div className="cfs-dinfo"><div className="cfs-dname">Matrícula da Imóvel</div><div className="cfs-ddate">Adicionado 24/08/2023</div></div>
+                  <div className="cfs-toggle on"><span /></div>
+                </div>
+                <div className="cfs-drow">
+                  <div className="cfs-dicon"></div>
+                  <div className="cfs-dinfo"><div className="cfs-dname">Projeto Arq. Prefeitura</div><div className="cfs-ddate">Adicionado 24/08/2023</div></div>
+                  <div className="cfs-toggle on"><span /></div>
                 </div>
               </div>
-              <div className="how-step r" data-anim="fade-right" data-delay="3">
-                <div className="how-num">4</div>
-                <div>
-                  <h4>Pague com segurança</h4>
-                  <p>Aprove medições e libere pagamentos com um toque. Histórico completo para auditoria e prestação de contas.</p>
-                </div>
+              <div className="cf-content">
+                <h3>Gestão de documentos</h3>
+                <p>Contratos, plantas, alvarás e relatórios técnicos sempre disponíveis. Sem e-mail perdido, sem pasta física.</p>
               </div>
             </div>
+
+            {/* Card 4: Suporte técnico */}
+            <div className="cf-card" data-anim="scale-up" data-delay="4">
+              <div className="cf-snap cf-snap-chat">
+                <div className="cfs-chat-header">
+                  <div className="cfs-avatar orange">B</div>
+                  <div>
+                    <div className="cfs-name">Bella Morada Construtora</div>
+                    <div className="cfs-online">● Online agora</div>
+                  </div>
+                </div>
+                <div className="cfs-messages">
+                  <div className="cfs-msg recv">Olá! Como posso ajudar?</div>
+                  <div className="cfs-msg sent">Qual a previsão para a laje?</div>
+                  <div className="cfs-msg recv">Previsto para 15 de agosto. Já está no cronograma da obra.</div>
+                  <div className="cfs-msg sent">Ótimo, obrigado! 👍</div>
+                  <div className="cfs-msg recv">Qualquer dúvida, estamos aqui!</div>
+                </div>
+                <div className="cfs-chat-input">
+                  <div className="cfs-input-placeholder">Enviar mensagem...</div>
+                  <div className="cfs-send">→</div>
+                </div>
+              </div>
+              <div className="cf-content">
+                <h3>Suporte técnico</h3>
+                <p>Canal direto com a equipe da construtora. Dúvidas e ocorrências registradas com histórico e resolução rastreável.</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

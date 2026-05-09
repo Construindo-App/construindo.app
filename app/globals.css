@@ -123,7 +123,7 @@ h1,h2,h3,.hero-h1,.sec-h2,.stat-num,.final-cta h2,.hero-badge{
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 
 .hero-h1{
-  font-size:72px;
+  font-size:58px;
   font-weight:600;line-height:1.0;
   letter-spacing:-2px;
   color:var(--text);
@@ -222,7 +222,7 @@ h1,h2,h3,.hero-h1,.sec-h2,.stat-num,.final-cta h2,.hero-badge{
   text-transform:uppercase;color:var(--orange);margin-bottom:18px;
 }
 .sec-h2{
-  font-size:clamp(36px,4.5vw,58px);
+  font-size:clamp(28px,3.5vw,46px);
   font-weight:600;letter-spacing:-1px;line-height:1.05;color:var(--text);
 }
 .sec-h2 .grad{color:var(--orange)}
@@ -323,42 +323,219 @@ h1,h2,h3,.hero-h1,.sec-h2,.stat-num,.final-cta h2,.hero-badge{
   pointer-events:none;
 }
 .stats-inner{position:relative;z-index:1;max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center;transition:opacity .3s}
-.stat-num{font-size:clamp(40px,5vw,64px);font-weight:600;color:#fff;letter-spacing:-2px;line-height:1}
+.stat-num{font-size:clamp(32px,4vw,52px);font-weight:600;color:#fff;letter-spacing:-2px;line-height:1}
 .stat-label{font-size:13px;color:var(--dark-muted);margin-top:10px;line-height:1.4}
 
-/* ─── HOW IT WORKS ─── */
-.how{background:#fff;border-bottom:1px solid var(--border)}
-.how-header{text-align:center;margin-bottom:72px}
-.how-header .sec-sub{max-width:520px;margin:18px auto 0;text-align:center}
-.how-grid{display:grid;grid-template-columns:1fr 260px 1fr;gap:48px;align-items:center}
-.how-steps{display:flex;flex-direction:column;gap:32px}
-.how-step{display:flex;gap:16px;align-items:flex-start}
-.how-step.r{flex-direction:row-reverse;text-align:right}
-.how-num{
-  width:40px;height:40px;border-radius:12px;flex-shrink:0;
-  background:var(--bg);border:1px solid var(--border);color:var(--text);
-  font-size:15px;font-weight:600;
-  display:flex;align-items:center;justify-content:center;
+/* ─── CLIENT PORTAL ─── */
+.client-feat{background:#fff;border-bottom:1px solid var(--border)}
+.cf-header{text-align:center;margin-bottom:64px}
+.cf-sub{max-width:540px;margin:18px auto 0;text-align:center}
+.cf-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:52px 40px;
+  max-width:900px;
+  margin:0 auto;
 }
-.how-step h4{font-size:16px;font-weight:600;margin-bottom:5px;color:var(--text)}
-.how-step p{font-size:14px;color:var(--muted);line-height:1.6}
-.how-phone{
-  width:260px;
-  background:#fff;border-radius:36px;border:5px solid var(--text);
+.cf-card{
+  background:transparent;
+  border:none;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  align-items:stretch;
+}
+.cf-content h3{font-size:18px;font-weight:600;color:var(--text);margin-bottom:8px}
+.cf-content p{font-size:14px;color:var(--muted);line-height:1.65}
+
+/* ── Snap container ── */
+.cf-snap{
+  background:var(--bg);
+  border-radius:20px;
   overflow:hidden;
-  box-shadow:0 24px 60px rgba(0,0,0,.12);
+  padding:16px;
+  height:292px;
+  font-size:11px;
+  color:var(--text);
+  display:flex;
+  flex-direction:column;
+  gap:0;
 }
-.hw-notch{background:var(--text);height:22px;display:flex;align-items:center;justify-content:center}
-.hw-notch span{width:64px;height:8px;background:#333;border-radius:100px;display:block}
-.hw-body{padding:16px}
-.hw-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-.hw-title-text{font-size:13px;font-weight:600;color:var(--text)}
-.hw-tag{background:rgba(13,13,13,.06);color:var(--text);font-size:10px;font-weight:600;padding:3px 8px;border-radius:6px}
-.hw-img{width:100%;height:88px;border-radius:12px;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:36px;margin-bottom:12px;border:1px solid var(--border)}
-.hw-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--border);font-size:11px}
-.hw-row:last-child{border-bottom:none}
-.hw-row span:last-child{font-weight:700;color:var(--orange)}
-.hw-btn{width:100%;margin-top:10px;padding:10px;border-radius:10px;border:none;background:var(--ink);color:#fff;font-size:12px;font-weight:600;cursor:pointer}
+
+/* App header (shared) */
+.cfs-app-header{display:flex;align-items:center;gap:5px;margin-bottom:10px;font-size:12px;font-weight:600}
+.cfs-back{color:var(--muted);font-size:13px;margin-right:2px}
+.cfs-app-icon{font-size:14px}
+.cfs-app-title{font-size:12px;font-weight:600}
+
+/* ── Diary snap ── */
+.cfs-timeline-row{display:flex;align-items:center;gap:4px;margin-bottom:10px}
+.cfs-tl-dot{width:18px;height:18px;border-radius:50%;flex-shrink:0}
+.cfs-tl-thumb{width:48px;height:36px;background:#C8BFB0;border-radius:7px;flex-shrink:0}
+.cfs-tl-dash{flex:1;border-top:1.5px dashed #B0A898}
+.cfs-diary-label{font-size:13px;font-weight:700;margin-bottom:6px}
+.cfs-diary-date{display:flex;align-items:center;gap:5px;font-size:10px;font-weight:600;margin-bottom:7px}
+.cfs-diamond{font-size:7px}
+.cfs-diary-photo{
+  width:100%;height:72px;border-radius:10px;flex-shrink:0;
+  background:linear-gradient(135deg,#B8A898 0%,#8B7560 100%);
+  margin-bottom:8px;
+}
+.cfs-skeleton-lines{display:flex;flex-direction:column;gap:5px;margin-bottom:10px}
+.cfs-sk{height:7px;background:#D1CCC2;border-radius:4px}
+.cfs-diary-btns{display:flex;gap:8px;margin-top:auto}
+.cfs-btn-outline{
+  flex:1;text-align:center;padding:6px 0;border-radius:8px;
+  border:1px solid var(--border);font-size:9px;font-weight:600;
+  background:#fff;color:var(--text);
+}
+.cfs-btn-outline.red{color:#EF4444;border-color:#FECACA}
+
+/* ── Payments snap ── */
+.cfs-profile{display:flex;align-items:center;gap:9px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.cfs-avatar{
+  width:30px;height:30px;border-radius:50%;flex-shrink:0;
+  background:#E8C8A8;display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:700;color:#8B5E3C;
+}
+.cfs-avatar.orange{background:var(--orange);color:#fff}
+.cfs-name{font-size:10px;font-weight:600;color:var(--text);line-height:1.3}
+.cfs-role{font-size:9px;color:var(--muted)}
+.cfs-table{background:#fff;border-radius:10px;overflow:hidden;margin-bottom:10px}
+.cfs-tr{display:flex;justify-content:space-between;padding:5px 9px;border-bottom:1px solid #F0EBE3;font-size:9px}
+.cfs-tr:last-child{border-bottom:none}
+.cfs-tr span:last-child{font-weight:600}
+.cfs-pay-title{font-size:12px;font-weight:700;margin-bottom:6px}
+.cfs-prog{height:4px;background:#E5E0D8;border-radius:2px;margin-bottom:9px}
+.cfs-prog-fill{width:72%;height:100%;background:var(--orange);border-radius:2px}
+.cfs-prow{display:flex;align-items:center;gap:7px;background:#fff;border-radius:9px;padding:6px 9px}
+.cfs-prow.muted{opacity:.55}
+.cfs-pcheck{
+  width:20px;height:20px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;
+}
+.cfs-pcheck.green{background:#DCFCE7;color:#16A34A;border:1.5px solid #16A34A}
+.cfs-pcheck.amber{background:#FEF3C7;color:#D97706;border:1.5px solid #D97706}
+.cfs-pcheck.grey{background:#F3F4F6;border:1.5px solid #D1D5DB}
+.cfs-pinfo{flex:1}
+.cfs-pdate{font-size:10px;font-weight:600}
+.cfs-psub{font-size:9px;color:var(--muted)}
+.cfs-pamt{font-size:10px;font-weight:700;margin-left:auto}
+
+/* ── Docs snap ── */
+.cfs-doc-title{font-size:13px;font-weight:700;margin-bottom:9px}
+.cfs-tabs{display:flex;gap:3px;background:#E5E0D8;border-radius:10px;padding:3px;margin-bottom:10px}
+.cfs-tab{flex:1;text-align:center;font-size:9px;font-weight:500;padding:5px 6px;border-radius:7px;color:var(--muted)}
+.cfs-tab.active{background:#fff;color:var(--text);font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.cfs-drow{display:flex;align-items:center;gap:8px;background:#fff;border-radius:9px;padding:7px 9px;margin-bottom:4px}
+.cfs-dicon{
+  width:24px;height:28px;flex-shrink:0;border-radius:4px;
+  background:#F0EBE3;border:1px solid var(--border);
+  position:relative;
+}
+.cfs-dicon::after{
+  content:'';position:absolute;top:5px;left:4px;right:4px;height:2px;
+  background:#C8BFB0;border-radius:1px;box-shadow:0 4px 0 #C8BFB0,0 8px 0 #C8BFB0;
+}
+.cfs-dinfo{flex:1;overflow:hidden}
+.cfs-dname{font-size:10px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cfs-ddate{font-size:9px;color:var(--muted)}
+.cfs-toggle{width:28px;height:16px;border-radius:8px;flex-shrink:0;position:relative}
+.cfs-toggle span{position:absolute;width:12px;height:12px;border-radius:50%;background:#fff;top:2px;left:2px}
+.cfs-toggle.off{background:#D1D5DB}
+.cfs-toggle.on{background:var(--orange)}
+.cfs-toggle.on span{transform:translateX(12px)}
+.cfs-plist{display:flex;flex-direction:column;gap:4px}
+
+/* ── Support snap ── */
+.cfs-chat-header{
+  display:flex;align-items:center;gap:9px;
+  padding-bottom:10px;border-bottom:1px solid var(--border);margin-bottom:10px;
+}
+.cfs-online{font-size:9px;color:#10B981;font-weight:600}
+.cfs-messages{flex:1;display:flex;flex-direction:column;gap:6px;overflow:hidden}
+.cfs-msg{
+  max-width:78%;padding:7px 10px;border-radius:12px;
+  font-size:10px;line-height:1.45;font-weight:500;
+}
+.cfs-msg.recv{
+  background:#fff;color:var(--text);
+  align-self:flex-start;border-bottom-left-radius:3px;
+}
+.cfs-msg.sent{
+  background:var(--orange);color:#fff;
+  align-self:flex-end;border-bottom-right-radius:3px;
+}
+.cfs-chat-input{
+  display:flex;align-items:center;gap:6px;
+  background:#fff;border-radius:10px;padding:7px 10px;margin-top:auto;
+}
+.cfs-input-placeholder{flex:1;font-size:10px;color:#9CA3AF}
+.cfs-send{
+  width:22px;height:22px;border-radius:50%;
+  background:var(--orange);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;
+}
+
+/* ─── SNAP ANIMATIONS ─── */
+
+/* ── Diary snap scene ── */
+.cf-snap-diary{padding:0}
+.diary-scene{position:relative;width:100%;height:100%}
+.diary-svg{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none}
+.dphoto{position:absolute;width:120px;height:auto}
+.dphoto-1{left:50px;top:10px}
+.dphoto-2{left:182px;top:90px}
+.dphoto-3{left:302px;top:160px}
+.dicon{position:absolute;width:46px;height:46px}
+.dicon-orange{left:4px;top:108px}
+.dicon-green{left:298px;top:232px}
+
+/* Diary: photo float */
+@keyframes float1{0%,100%{transform:rotate(-8deg) translateY(0)}50%{transform:rotate(-8deg) translateY(-5px)}}
+@keyframes float2{0%,100%{transform:rotate(2deg) translateY(0)}50%{transform:rotate(2deg) translateY(-5px)}}
+@keyframes float3{0%,100%{transform:rotate(7deg) translateY(0)}50%{transform:rotate(7deg) translateY(-5px)}}
+.dphoto-1{animation:float1 4s ease-in-out infinite}
+.dphoto-2{animation:float2 4s ease-in-out infinite .7s}
+.dphoto-3{animation:float3 4s ease-in-out infinite 1.4s}
+
+/* Diary: icon pulse */
+@keyframes dotPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.2);opacity:.8}}
+.cf-snap-diary .dicon-orange{animation:dotPulse 2.5s ease-in-out infinite}
+.cf-snap-diary .dicon-green{animation:dotPulse 2.5s ease-in-out infinite .9s}
+
+/* Payments: progress bar fill */
+@keyframes progFill{0%,8%{width:5%}55%,80%{width:72%}95%,100%{width:5%}}
+.cf-snap-pay .cfs-prog-fill{animation:progFill 7s ease-in-out infinite}
+
+/* Payments: rows slide in */
+@keyframes payRow1{0%,6%{opacity:0;transform:translateX(-8px)}16%,76%{opacity:1;transform:translateX(0)}88%,100%{opacity:0}}
+@keyframes payRow2{0%,18%{opacity:0;transform:translateX(-8px)}28%,76%{opacity:1;transform:translateX(0)}88%,100%{opacity:0}}
+@keyframes payRow3{0%,30%{opacity:0;transform:translateX(-8px)}40%,76%{opacity:1;transform:translateX(0)}88%,100%{opacity:0}}
+.cf-snap-pay .cfs-plist .cfs-prow:nth-child(1){animation:payRow1 7s ease-in-out infinite}
+.cf-snap-pay .cfs-plist .cfs-prow:nth-child(2){animation:payRow2 7s ease-in-out infinite}
+.cf-snap-pay .cfs-plist .cfs-prow:nth-child(3){animation:payRow3 7s ease-in-out infinite}
+
+/* Docs: toggles flip on/off */
+@keyframes toggleBg{0%,12%{background:#D1D5DB}35%,68%{background:var(--orange)}88%,100%{background:#D1D5DB}}
+@keyframes knobSlide{0%,12%{transform:translateX(0)}35%,68%{transform:translateX(12px)}88%,100%{transform:translateX(0)}}
+.cf-snap-docs .cfs-drow:nth-child(4) .cfs-toggle{animation:toggleBg 5s ease-in-out infinite}
+.cf-snap-docs .cfs-drow:nth-child(4) .cfs-toggle span{animation:knobSlide 5s ease-in-out infinite}
+.cf-snap-docs .cfs-drow:nth-child(5) .cfs-toggle{animation:toggleBg 5s ease-in-out infinite 1.6s}
+.cf-snap-docs .cfs-drow:nth-child(5) .cfs-toggle span{animation:knobSlide 5s ease-in-out infinite 1.6s}
+
+/* Chat: messages appear sequentially */
+@keyframes chatIn1{0%,3%{opacity:0;transform:translateY(6px)}9%,88%{opacity:1;transform:translateY(0)}94%,100%{opacity:0}}
+@keyframes chatIn2{0%,14%{opacity:0;transform:translateY(6px)}20%,88%{opacity:1;transform:translateY(0)}94%,100%{opacity:0}}
+@keyframes chatIn3{0%,29%{opacity:0;transform:translateY(6px)}35%,88%{opacity:1;transform:translateY(0)}94%,100%{opacity:0}}
+@keyframes chatIn4{0%,44%{opacity:0;transform:translateY(6px)}50%,88%{opacity:1;transform:translateY(0)}94%,100%{opacity:0}}
+@keyframes chatIn5{0%,59%{opacity:0;transform:translateY(6px)}65%,88%{opacity:1;transform:translateY(0)}94%,100%{opacity:0}}
+.cf-snap-chat .cfs-messages .cfs-msg:nth-child(1){opacity:0;animation:chatIn1 11s ease-in-out infinite}
+.cf-snap-chat .cfs-messages .cfs-msg:nth-child(2){opacity:0;animation:chatIn2 11s ease-in-out infinite}
+.cf-snap-chat .cfs-messages .cfs-msg:nth-child(3){opacity:0;animation:chatIn3 11s ease-in-out infinite}
+.cf-snap-chat .cfs-messages .cfs-msg:nth-child(4){opacity:0;animation:chatIn4 11s ease-in-out infinite}
+.cf-snap-chat .cfs-messages .cfs-msg:nth-child(5){opacity:0;animation:chatIn5 11s ease-in-out infinite}
 
 /* ─── TESTIMONIALS ─── */
 .testi-sec{background:var(--bg);border-bottom:1px solid var(--border);padding:104px 48px}
@@ -382,7 +559,7 @@ h1,h2,h3,.hero-h1,.sec-h2,.stat-num,.final-cta h2,.hero-badge{
   pointer-events:none;
 }
 .final-cta-inner{position:relative;z-index:1;max-width:760px;margin:0 auto}
-.final-cta h2{font-size:clamp(40px,5.5vw,72px);font-weight:600;color:#fff;letter-spacing:-1.5px;line-height:1.04;margin-bottom:24px}
+.final-cta h2{font-size:clamp(32px,4.5vw,58px);font-weight:600;color:#fff;letter-spacing:-1.5px;line-height:1.04;margin-bottom:24px}
 .final-cta h2 .grad{color:var(--orange)}
 .final-cta p{font-size:17px;color:var(--dark-muted);margin-bottom:48px;line-height:1.65}
 .final-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
@@ -590,9 +767,7 @@ h1,h2,h3,.hero-h1,.sec-h2,.stat-num,.final-cta h2,.hero-badge{
   .why-grid{grid-template-columns:1fr}
   .feat-dark-inner,.feat-light-inner{grid-template-columns:1fr}
   .stats-inner{grid-template-columns:repeat(2,1fr)}
-  .how-grid{grid-template-columns:1fr}
-  .how-phone{display:none}
-  .how-step.r{flex-direction:row;text-align:left}
+  .cf-grid{grid-template-columns:1fr}
   .testi-sec{padding:72px 24px}
   .testi-grid{grid-template-columns:1fr}
   .final-cta{padding:88px 24px}
