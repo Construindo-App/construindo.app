@@ -16,7 +16,7 @@ export default function Home() {
       <section className="hero">
         <div className="hero-inner">
           <div className="hero-app-icon">
-            <Image src="/apple-touch-icon.png" alt="Construindo" width={96} height={96} priority />
+            <Image src="/icon-logo.png" alt="Construindo" width={96} height={96} priority />
           </div>
           <h1 className="hero-h1">
             Sua obra.<br /><span className="grad">Sob controle.</span>
