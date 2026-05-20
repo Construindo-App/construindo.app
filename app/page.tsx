@@ -101,15 +101,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* LOGOS */}
-      <div className="logos">
-        <div className="logos-label" data-anim="fade-up">Confiado por construtoras em todo o Brasil</div>
-        <div className="logos-row" data-anim="fade-up" data-delay="2">
-          <span>MRV</span><span>Cyrela</span><span>Tenda</span>
-          <span>EZTec</span><span>Tegra</span><span>Even</span><span>Direcional</span>
-        </div>
-      </div>
-
       {/* WHY */}
       <section className="sec why" id="por-que">
         <div className="sec-inner">

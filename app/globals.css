@@ -150,13 +150,13 @@ h1,h2,h3,.hero-h1,.sec-h2,.stat-num,.final-cta h2,.hero-badge{
 .btn-primary:hover{background:#2a2a2a;transform:translateY(-2px);box-shadow:0 10px 32px rgba(13,13,13,.25)}
 .btn-secondary{
   display:inline-flex;align-items:center;gap:9px;
-  background:transparent;color:var(--text);
+  background:#fff;color:var(--text);
   font-size:15px;font-weight:600;
   padding:14px 30px;border-radius:100px;
-  border:1.5px solid var(--border);
-  transition:background .2s,border-color .2s,transform .15s;
+  border:none;
+  transition:background .2s,transform .15s;
 }
-.btn-secondary:hover{background:var(--bg);border-color:rgba(13,13,13,.2);transform:translateY(-2px)}
+.btn-secondary:hover{background:#f0efed;transform:translateY(-2px)}
 .btn-primary svg,.btn-secondary svg{width:18px;height:18px;flex-shrink:0}
 
 .hero-free{font-size:13px;color:var(--muted);margin-bottom:72px}
