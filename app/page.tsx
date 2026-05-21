@@ -115,7 +115,30 @@ export default function Home() {
                 <h3>Cronograma em tempo real</h3>
                 <p>Visualize cada etapa, defina dependências e receba alertas de atraso antes que o problema escale.</p>
               </div>
-              <div className="why-step-visual why-step-visual--1">📅</div>
+              <div className="why-step-visual why-step-visual--1">
+                <div className="ws-ui">
+                  <div className="ws-ui-hd">
+                    <span className="ws-ui-label">Cronograma</span>
+                    <span className="ws-badge ws-badge--on">Em andamento</span>
+                  </div>
+                  <div className="ws-task">
+                    <div className="ws-dot ws-dot--done"></div>
+                    <span className="ws-task-nm">Fundação</span>
+                    <span className="ws-task-pct">100%</span>
+                  </div>
+                  <div className="ws-task">
+                    <div className="ws-dot ws-dot--active"></div>
+                    <span className="ws-task-nm">Estrutura</span>
+                    <span className="ws-task-pct">68%</span>
+                  </div>
+                  <div className="ws-task">
+                    <div className="ws-dot"></div>
+                    <span className="ws-task-nm">Alvenaria</span>
+                    <span className="ws-task-pct">0%</span>
+                  </div>
+                  <div className="ws-mini-bar"><div className="ws-mini-bar-fill"></div></div>
+                </div>
+              </div>
             </div>
             <div className="why-step" data-anim="fade-up" data-delay="1">
               <div className="why-step-body">
@@ -123,7 +146,23 @@ export default function Home() {
                 <h3>Orçado vs. realizado</h3>
                 <p>Compare custos planejados e executados em tempo real. Identifique desvios no segundo em que acontecem.</p>
               </div>
-              <div className="why-step-visual why-step-visual--2">💰</div>
+              <div className="why-step-visual why-step-visual--2">
+                <div className="ws-ui">
+                  <div className="ws-ui-hd">
+                    <span className="ws-ui-label">Orçamento</span>
+                    <span className="ws-badge ws-badge--blue">Nov 2025</span>
+                  </div>
+                  <div className="ws-brow">
+                    <span>Orçado</span><span className="ws-bamt">R$ 850.000</span>
+                  </div>
+                  <div className="ws-brow">
+                    <span>Realizado</span><span className="ws-bamt">R$ 791.400</span>
+                  </div>
+                  <div className="ws-brow ws-brow--hi">
+                    <span>Economia</span><span className="ws-bamt ws-bamt--good">↓ R$ 58.600</span>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="why-step" data-anim="fade-up" data-delay="2">
               <div className="why-step-body">
@@ -131,7 +170,38 @@ export default function Home() {
                 <h3>Equipes e fornecedores</h3>
                 <p>Gerencie presença, produtividade e pagamentos de subempreiteiros direto do app.</p>
               </div>
-              <div className="why-step-visual why-step-visual--3">👷</div>
+              <div className="why-step-visual why-step-visual--3">
+                <div className="ws-ui">
+                  <div className="ws-ui-hd">
+                    <span className="ws-ui-label">Equipe</span>
+                    <span className="ws-badge ws-badge--on">24 ativos</span>
+                  </div>
+                  <div className="ws-member">
+                    <div className="ws-av" style={{background:'#DE6333'}}>R</div>
+                    <div className="ws-member-info">
+                      <div className="ws-member-nm">Rafael Costa</div>
+                      <div className="ws-member-role">Mestre de obras</div>
+                    </div>
+                    <span className="ws-status ws-status--on">● Online</span>
+                  </div>
+                  <div className="ws-member">
+                    <div className="ws-av" style={{background:'#3B82F6'}}>C</div>
+                    <div className="ws-member-info">
+                      <div className="ws-member-nm">Carlos Mendes</div>
+                      <div className="ws-member-role">Engenheiro civil</div>
+                    </div>
+                    <span className="ws-status ws-status--on">● Online</span>
+                  </div>
+                  <div className="ws-member">
+                    <div className="ws-av" style={{background:'#8B5CF6'}}>A</div>
+                    <div className="ws-member-info">
+                      <div className="ws-member-nm">Ana Souza</div>
+                      <div className="ws-member-role">Arquiteta</div>
+                    </div>
+                    <span className="ws-status ws-status--off">● Offline</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
