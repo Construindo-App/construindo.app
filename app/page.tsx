@@ -417,6 +417,18 @@ export default function Home() {
 
       {/* FINAL CTA */}
       <section className="final-cta">
+        <svg className="final-cta-house" viewBox="0 0 500 460" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          {/* Main walls + roof */}
+          <path className="h-outline" pathLength="1" d="M 55 420 L 445 420 L 445 228 L 250 62 L 55 228 Z" />
+          {/* Chimney */}
+          <path className="h-chimney" pathLength="1" d="M 315 122 L 315 74 L 362 74 L 362 150" />
+          {/* Door */}
+          <path className="h-door" pathLength="1" d="M 198 420 L 198 308 L 302 308 L 302 420" />
+          {/* Left window */}
+          <path className="h-win-l" pathLength="1" d="M 88 262 L 88 332 L 172 332 L 172 262 Z" />
+          {/* Right window */}
+          <path className="h-win-r" pathLength="1" d="M 328 262 L 328 332 L 412 332 L 412 262 Z" />
+        </svg>
         <div className="final-cta-inner" data-anim="fade-up">
           <h2>Comece a gerir suas obras<br /><span className="grad">do jeito certo.</span></h2>
           <p>Chega de planilha. Sua obra organizada ainda hoje, de graça.</p>
