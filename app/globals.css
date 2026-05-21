@@ -592,11 +592,11 @@ h1,h2,h3,.hero-h1,.sec-h2,.stat-num,.final-cta h2,.hero-badge{
 }
 .final-cta{
   background:radial-gradient(181% 100% at 50% 0%, #DE6333 0%, #f8d0a8 100%);
-  padding:128px 48px;text-align:center;position:relative;overflow:hidden;
+  padding:80px 48px;text-align:center;position:relative;overflow:hidden;
 }
 .final-cta-house{
-  position:absolute;width:min(680px,95%);height:auto;
-  top:50%;left:50%;transform:translate(-50%,-47%);
+  position:absolute;width:min(520px,75%);height:auto;
+  top:50%;right:-60px;transform:translateY(-50%);
   z-index:0;pointer-events:none;
   animation:house-fade 24s ease-in-out infinite;
 }
