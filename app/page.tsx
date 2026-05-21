@@ -107,23 +107,31 @@ export default function Home() {
           <div className="why-header">
             <div className="eyebrow" data-anim="fade-up">Por que Construindo?</div>
             <h2 className="sec-h2" data-anim="fade-up" data-delay="1">Tudo que sua obra precisa,<br /><span className="grad">num único lugar</span></h2>
-            <p className="sec-sub" data-anim="fade-up" data-delay="2">Elimine planilhas, WhatsApp e papelada. O Construindo centraliza a gestão para que você entregue no prazo e no orçamento.</p>
           </div>
-          <div className="why-grid">
-            <div className="why-card" data-anim="scale-up" data-delay="1">
-              <div className="why-icon">📅</div>
-              <h3>Cronograma em tempo real</h3>
-              <p>Visualize cada etapa em Gantt, defina dependências e receba alertas automáticos de atraso antes que o problema escale.</p>
+          <div className="why-steps">
+            <div className="why-step" data-anim="fade-up">
+              <div className="why-step-body">
+                <div className="why-step-num">01 <span>/ 03</span></div>
+                <h3>Cronograma em tempo real</h3>
+                <p>Visualize cada etapa, defina dependências e receba alertas de atraso antes que o problema escale.</p>
+              </div>
+              <div className="why-step-visual why-step-visual--1">📅</div>
             </div>
-            <div className="why-card" data-anim="scale-up" data-delay="2">
-              <div className="why-icon">💰</div>
-              <h3>Orçado vs. realizado</h3>
-              <p>Compare custos planejados e executados em tempo real. Identifique desvios no segundo em que acontecem, não no fim do mês.</p>
+            <div className="why-step" data-anim="fade-up" data-delay="1">
+              <div className="why-step-body">
+                <div className="why-step-num">02 <span>/ 03</span></div>
+                <h3>Orçado vs. realizado</h3>
+                <p>Compare custos planejados e executados em tempo real. Identifique desvios no segundo em que acontecem.</p>
+              </div>
+              <div className="why-step-visual why-step-visual--2">💰</div>
             </div>
-            <div className="why-card" data-anim="scale-up" data-delay="3">
-              <div className="why-icon">👷</div>
-              <h3>Equipes e fornecedores</h3>
-              <p>Gerencie presença, produtividade e pagamentos de subempreiteiros direto do app. Histórico completo de cada profissional.</p>
+            <div className="why-step" data-anim="fade-up" data-delay="2">
+              <div className="why-step-body">
+                <div className="why-step-num">03 <span>/ 03</span></div>
+                <h3>Equipes e fornecedores</h3>
+                <p>Gerencie presença, produtividade e pagamentos de subempreiteiros direto do app.</p>
+              </div>
+              <div className="why-step-visual why-step-visual--3">👷</div>
             </div>
           </div>
         </div>
